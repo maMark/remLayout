@@ -29,6 +29,7 @@
 	<script type="text/javascript">
 		//根据dpr缩放页面，相当于修改layout viewport（document.documentElement.clientWidth）的宽度。
 		//让1css像素等于1物理像素，让高清屏能显示物理像素1px的大小。
+		//有些设备对dpr的更改有兼容问题，如果对1px无必须的需求,不需要缩放。使用demo_01的例子
 		function refreshRem(){
 			var dpr = window.devicePixelRatio;
 			if(dpr >=3){
