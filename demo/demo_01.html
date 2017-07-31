@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<title>现实自适应</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		/*以750设计稿和375屏为基准*/
+		html{line-height: 1;}
+		body{font-size: .16em;}
+		.header{ height: .6rem; line-height: .6rem; text-align: center;}
+		.content{background-color:#ff0000; padding:.1rem;}
+		.goodsList{display:table;background-color: #f2f1f0;}
+		.goods{display: table;background-color: #fff;padding: .2rem 0 .14rem 0; border-bottom: 1px solid #ff0000;}
+
+		.goods a.goods-imgbox{display: table-cell;}
+		.goods a.goods-imgbox img {width: 1.76rem;height: 1.76rem; vertical-align: top;}
+
+		.goods-description{position:relative;display: table-cell;padding-left: .16rem;padding-right:.19rem;vertical-align: top;}
+		.goods-title{  font-size:.24rem;overflow: hidden;line-height: 1.2; display: -webkit-box;display: box; -webkit-box-orient:vertical; box-orient: vertical;-webkit-line-clamp:2; line-clamp:2; }
+
+		.goods-price{vertical-align: bottom; padding: 0.05rem 0;}
+		.goods-price span:nth-child(1){display:inline-block;padding:.02rem .06rem;border-radius:.02rem;background-color: #ff0000; color:#fff; font-size: .22rem; }
+		.goods-price span:nth-child(2){display:inline-block;color:#ff0000; font-size: .48rem;font-weight: bold;}
+		.goods-price span:nth-child(3){display:inline-block;padding:.02rem;border-radius:.02rem;background-color: #ff0000; color:#fff; font-size: .24rem; }
+		.goods-buybtn{display: inline-block; position: absolute; width:1.6rem;height:.48rem; line-height:.48rem;bottom: 0.01rem;right: .19rem; font-size: .28rem;background-color: #ff0000;color:#fff;border-radius: .02rem;text-decoration: none; text-align: center; }
+	</style>
+	<script type="text/javascript">
+		var baseDeviceWidth = 375;
+		var baseFontSize = 100; //转换基数
+		var currentDeviceWidth = document.documentElement.clientWidth;
+		var currentFontSize = (currentDeviceWidth/baseDeviceWidth)*baseFontSize/2;
+		document.documentElement.setAttribute("style","font-size:"+ currentFontSize +"px;");
+		
+		window.onresize = function(){
+			var baseDeviceWidth = 375;
+			var baseFontSize = 100;
+			var currentDeviceWidth = document.documentElement.clientWidth;
+			var currentFontSize = (currentDeviceWidth/baseDeviceWidth)*baseFontSize/2;
+			document.documentElement.setAttribute("style","font-size:"+ currentFontSize +"px;");
+		};
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">商品列表</div>
+		<div class="content">
+			<ul class="goodsList">
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+				<li class="goods">
+					<a href="" class="goods-imgbox">
+						<img src="">
+					</a>
+					<div class="goods-description">
+						<p class="goods-title">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</p>
+						<p class="goods-price">
+							<span>双11价</span>
+							<span>￥99.00</span>
+							<span>包邮</span>
+						</p>
+						<a href="" class="goods-buybtn">立即购买</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>
