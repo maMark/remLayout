@@ -104,21 +104,18 @@
 		}
 	</style>
 	<script type="text/javascript">
+		var designWidth = 750, rem2px = 100;
+		var html = document.querySelector("html");
+		//考虑android浏览器默认字体大小不是16px的情况，需要获取实际的字体大小
+		var htmlFontSize = parseFloat(window.getComputedStyle(html, null).getPropertyValue('font-size'));
 		function refreshRem() {
-			//750设计稿、100转换基数：在750设计稿上算得宽度为100px 转换为rem 即 1rem
-			//对应关系 document.documentElement.getBoundingClientRect().width/750 = x/100，x为当前屏幕对应的字体大小
-			//375屏对应750设计稿，缩小了2倍 所以字体也对应缩小2倍
-
-			var designWidth = 750; //以750设计稿为基准  也可以以640设计稿为基准
-			var rem2px = 100; //转换基数为100（100好计算，如果是10px，1rem=10px，但是浏览器支持的最小字体是12px 会转成 1rem = 12px ）
-			var currentDeviceWidth = document.documentElement.getBoundingClientRect().width;
-			var currentFontSize = (currentDeviceWidth / designWidth) * rem2px;
-			document.documentElement.setAttribute("style", "font-size:" + currentFontSize + "px;");
+			html.style.fontSize = html.getBoundingClientRect().width / designWidth * rem2px / htmlFontSize * 100 + '%';
 		}
 		refreshRem();
-		window.addEventListener("resize", refreshRem);
-
-		//该方案没有考虑dpr和浏览器默认字体的问题，如需考虑dpr使用demo_02的方案；需要考虑浏览器默认字体的使用demo_03
+		//window.resize检测用户设备横屏和竖屏
+		window.addEventListener("resize", function(){
+			refreshRem();
+		});
 	</script>
 </head>
 <body>

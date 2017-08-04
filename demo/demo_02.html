@@ -120,10 +120,10 @@
 
 			//修改html的fontsize
 			//750设计稿 100转换基数
-			var baseDeviceWidth = 750;
-			var baseFontSize = 100; //转换基数
+			var designWidth = 750;
+			var rem2px = 100; //转换基数
 			var currentDeviceWidth = document.documentElement.getBoundingClientRect().width;
-			var currentFontSize = (currentDeviceWidth/baseDeviceWidth)*baseFontSize;
+			var currentFontSize = (currentDeviceWidth/designWidth)*rem2px;
 			document.documentElement.setAttribute("style","font-size:"+ currentFontSize +"px;");
 		}
 		refreshRem();
