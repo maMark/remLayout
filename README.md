@@ -47,7 +47,7 @@ window.addEventListener("resize", refreshRem);
 
 defaultFontSize可用window.getComputedStyle(html, null).getPropertyValue('font-size')获取。
 <hr />
-请使用方案三解决方案二的问题。
+请使用方案三解决方案一的问题。
 
 方案三：
 <pre>
