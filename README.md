@@ -28,7 +28,7 @@ function refreshRem() {
 	//750设计稿、100转换基数：在750设计稿上算得宽度为100px 转换为rem 即 1rem
 	//对应关系 document.documentElement.getBoundingClientRect().width/750 = x/100，x为当前屏幕对应的字体大小
 	var designWidth = 750; //以750设计稿为基准  也可以以640设计稿为基准
-	var rem2px = 100; //转换基数为100（100好计算，如果是10px，1rem=10px，但是浏览器支持的最小字体是12px 会转成 1rem = 12px ）
+	var rem2px = 100; //转换基数为100（100好计算）
 	var currentDeviceWidth = document.documentElement.getBoundingClientRect().width;
 	var currentFontSize = (currentDeviceWidth / designWidth) * rem2px;
 	document.documentElement.setAttribute("style", "font-size:" + currentFontSize + "px;");
@@ -47,9 +47,9 @@ window.addEventListener("resize", refreshRem);
 
 defaultFontSize可用window.getComputedStyle(html, null).getPropertyValue('font-size')获取。
 <hr />
-请使用方案三解决方案一的问题。
+请使用方案二解决方案一的问题。
 
-方案三：
+方案二：
 <pre>
 	var designWidth = 750, rem2px = 100;
 	var html = document.querySelector("html");
