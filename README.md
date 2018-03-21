@@ -64,4 +64,6 @@ defaultFontSize可用window.getComputedStyle(html, null).getPropertyValue('font-
 		refreshRem();
 	});
 </pre>
+
+<mark>使用手机（微信）打开demo_01.html和demo_03.html；修改微信的字体大小。刷新页面，观察两种方案的区别。</mark>
 	
