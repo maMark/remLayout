@@ -110,7 +110,7 @@
 			//375屏对应750设计稿，缩小了2倍 所以字体也对应缩小2倍
 
 			var designWidth = 750; //以750设计稿为基准  也可以以640设计稿为基准
-			var rem2px = 100; //转换基数为100（100好计算，如果是10px，1rem=10px，但是浏览器支持的最小字体是12px 会转成 1rem = 12px ）
+			var rem2px = 100; //转换基数为100
 			var currentDeviceWidth = document.documentElement.getBoundingClientRect().width;
 			var currentFontSize = (currentDeviceWidth / designWidth) * rem2px;
 			document.documentElement.setAttribute("style", "font-size:" + currentFontSize + "px;");
