@@ -4,8 +4,106 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 	<title>demo_02</title>
-	<link rel="stylesheet" href="../src/css/demo.css">
 	<script src="../src/js/flexible.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		html {
+			line-height: 1;
+			-webkit-text-size-adjust: 100% !important;
+		}
+		body {
+			font-size: 16px;
+		}
+		.header {
+			height: 1.6rem;
+			line-height: 1.6rem;
+			text-align: center;
+		}
+		.content {
+			background-color: #ff0000;
+			padding: .267rem;
+		}
+		.goodsList {
+			display: table;
+			background-color: #f2f1f0;
+		}
+		.goods {
+			display: table;
+			background-color: #fff;
+			padding: .333rem 0 .233rem 0;
+			border-bottom: 1px solid #ff0000;
+		}
+		.goods a.goods-imgbox {
+			display: table-cell;
+		}
+		.goods a.goods-imgbox img {
+			width: 2.933rem;
+			height: 2.933rem;
+			vertical-align: top;
+		}
+		.goods-description {
+			position: relative;
+			display: table-cell;
+			padding-left: .266rem;
+			padding-right: .316rem;
+			vertical-align: top;
+		}
+		.goods-title {
+			font-size: .4rem;
+			overflow: hidden;
+			line-height: 1.2;
+			display: -webkit-box;
+			display: box;
+			-webkit-box-orient: vertical;
+			box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+		}
+		.goods-price {
+			vertical-align: bottom;
+			padding: 0.083rem 0;
+		}
+		.goods-price span:nth-child(1) {
+			display: inline-block;
+			padding: .083rem .01rem;
+			border-radius: .083rem;
+			background-color: #ff0000;
+			color: #fff;
+			font-size: .367rem;
+		}
+		.goods-price span:nth-child(2) {
+			display: inline-block;
+			color: #ff0000;
+			font-size: .8rem;
+			font-weight: bold;
+		}
+		.goods-price span:nth-child(3) {
+			display: inline-block;
+			padding: .033rem;
+			border-radius: .033rem;
+			background-color: #ff0000;
+			color: #fff;
+			font-size: .4rem;
+		}
+		.goods-buybtn {
+			display: inline-block;
+			position: absolute;
+			width: 2.667rem;
+			height: .8rem;
+			line-height: .8rem;
+			bottom: 0.0167rem;
+			right: .316rem;
+			font-size: .467rem;
+			background-color: #ff0000;
+			color: #fff;
+			border-radius: .033rem;
+			text-decoration: none;
+			text-align: center;
+		}
+	</style>
 	<!-- 如果需要禁用微信内置浏览器字体大小调整功能 请引用下面js -->
 	<!--<script type="text/javascript" src="../src/js/banFontSizeChange.js"></script>-->
 </head>

@@ -1,21 +1,22 @@
 # remLayout
-1、demo_01 简化版flexible 不考虑dpr
+  移动端rem自适应方案
 
-2、demo_02 引用flexible
+## 使用方法
+  1. 在head标签中引入index.js
+  
+      ```<script src="./src/js/remLayout.js"></script>```
+  
+  2. css中使用rem作为单位
+    
+    例：设计稿中的box宽度为120px；则css中： .box{ width: 1.2rem; }
 
-3、demo_03 使用百分比设置字体，可适应浏览器的字体大小改变
+### 额外内容
+1. banFontSizeChange.js 禁用微信浏览器的字体大小调整
 
-4、banFontSizeChange.js 禁用微信浏览器的字体大小调整
-
-5、禁用ios中浏览器的字体调整
+2. 禁用ios中浏览器的字体调整
 <pre>
   html{
     -webkit-text-size-adjust: 100% !important;
   }
 </pre>
-
-6、安卓应用中只能使用app原生功能
-
-WebSettings settings = webView.getSettings();
-settings.setTextZoom(100);
 
